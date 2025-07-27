@@ -1,0 +1,15 @@
+title = "/home/mufeed"
+base_url = "https://mufeed.dev"
+theme = "cat"
+compile_sass = true
+build_search_index = true
+
+[markdown]
+highlight_code = true
+
+[extra]
+menu = [
+    { name = "Home", url = "/", weight = 1 },
+    { name = "Projects", url = "/projects", weight = 2 },
+    { name = "Blog", url = "/blog", weight = 3 },
+]

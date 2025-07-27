@@ -1,0 +1,102 @@
+@import "palette";
+
+@font-face {
+    font-family: "Munro";
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: 100%;
+    font-display: swap;
+    src: local("Munro"), url("munro/munro-latin.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+@font-face {
+    font-family: "Munro";
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: 100%;
+    font-display: swap;
+    src: local("Munro"), url("munro/munro-latin-ext.woff2") format("woff2");
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: "Munro", monospace, sans-serif;
+    margin: 0;
+    padding: 2rem;
+}
+
+a {
+    color: var(--link);
+}
+
+a:hover {
+    color: var(--link-hover);
+}
+
+.container {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--header-bg);
+    color: var(--header-fg);
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow) 0px 4px 12px;
+}
+
+.header-left {
+    flex: 0 0 auto;
+    font-weight: bold;
+}
+
+.header-right {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header nav a {
+    cursor: pointer;
+    padding-top: 2px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+header nav a:hover {
+    border-bottom-color: var(--link-hover);
+}
+
+main {
+    margin: 1.5rem;
+}
+
+// Dark mode toggle
+.theme-toggle {
+    cursor: pointer;
+    filter: drop-shadow(0 0 0.3px currentColor) drop-shadow(0 0 0.3px currentColor);
+    // Alignment hack for the dark/light mode icons
+    // This is necessary to center the icons with the text.
+    margin-bottom: -4px;
+}

@@ -1,0 +1,4 @@
+name = "cat"
+description = "A minimalist, semi-retro, content-focused, pixel art-based Zola theme with a light and dark mode using the Catppuccin color palette."
+version = "0.1.0"
+authors = ["Mufeed Ali <me@mufeed.dev>"]

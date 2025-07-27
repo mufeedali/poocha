@@ -1,0 +1,121 @@
+// Default to dark theme (Mocha)
+:root {
+  // Mocha Palette - Base colors
+  --base: #1e1e2e;
+  --mantle: #181825;
+  --crust: #11111b;
+
+  // Mocha Palette - Surface colors
+  --surface0: #313244;
+  --surface1: #45475a;
+  --surface2: #585b70;
+
+  // Mocha Palette - Overlay colors
+  --overlay0: #6c7086;
+  --overlay1: #7f849c;
+  --overlay2: #9399b2;
+
+  // Mocha Palette - Text colors
+  --subtext0: #a6adc8;
+  --subtext1: #bac2de;
+  --text: #cdd6f4;
+
+  // Mocha Palette - Accent colors
+  --rosewater: #f5e0dc;
+  --flamingo: #f2cdcd;
+  --pink: #f5c2e7;
+  --mauve: #cba6f7;
+  --red: #f38ba8;
+  --maroon: #eba0ac;
+  --peach: #fab387;
+  --yellow: #f9e2af;
+  --green: #a6e3a1;
+  --teal: #94e2d5;
+  --sky: #89dceb;
+  --sapphire: #74c7ec;
+  --blue: #89b4fa;
+  --lavender: #b4befe;
+
+  // Semantic mappings
+  --bg: var(--base);
+  --fg: var(--text);
+  --subtle-fg: var(--subtext0);
+  --card-bg: var(--mantle);
+  --header-bg: var(--crust);
+  --header-fg: var(--text);
+  --link: var(--peach);
+  --link-hover: var(--flamingo);
+  --border: var(--surface0);
+  --accent: var(--lavender);
+  --code-bg: var(--surface1);
+  --pre-bg: var(--base);
+  --pre-fg: var(--text);
+  --shadow: var(--crust);
+
+  // Status colors
+  --success: var(--green);
+  --warning: var(--yellow);
+  --error: var(--red);
+  --info: var(--blue);
+}
+
+// Light theme (Latte)
+[data-theme="light"] {
+  // Latte Palette - Base colors
+  --base: #eff1f5;
+  --mantle: #e6e9ef;
+  --crust: #dce0e8;
+
+  // Latte Palette - Surface colors
+  --surface0: #ccd0da;
+  --surface1: #bcc0cc;
+  --surface2: #acb0be;
+
+  // Latte Palette - Overlay colors
+  --overlay0: #9ca0b0;
+  --overlay1: #8c8fa1;
+  --overlay2: #7c7f93;
+
+  // Latte Palette - Text colors
+  --subtext0: #6c6f85;
+  --subtext1: #5c5f77;
+  --text: #4c4f69;
+
+  // Latte Palette - Accent colors
+  --rosewater: #dc8a78;
+  --flamingo: #dd7878;
+  --pink: #ea76cb;
+  --mauve: #8839ef;
+  --red: #d20f39;
+  --maroon: #e64553;
+  --peach: #fe640b;
+  --yellow: #df8e1d;
+  --green: #40a02b;
+  --teal: #179299;
+  --sky: #04a5e5;
+  --sapphire: #209fb5;
+  --blue: #1e66f5;
+  --lavender: #7287fd;
+
+  // Semantic mappings
+  --bg: var(--base);
+  --fg: var(--text);
+  --subtle-fg: var(--subtext0);
+  --card-bg: var(--mantle);
+  --header-bg: var(--crust);
+  --header-fg: var(--text);
+  --link: var(--peach);
+  --link-hover: var(--flamingo);
+  --border: var(--surface0);
+  --accent: var(--lavender);
+  --code-bg: var(--mantle);
+  --pre-bg: var(--base);
+  --pre-fg: var(--text);
+  --shadow: var(--crust);
+
+  // Status colors
+  --success: var(--green);
+  --warning: var(--yellow);
+  --error: var(--red);
+  --info: var(--blue);
+}
