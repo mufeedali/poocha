@@ -6,8 +6,17 @@ build_search_index = true
 
 [markdown]
 highlight_code = true
+description = "My personal website."
+
+[extra.social]
+github = "https://github.com/mufeedali"
+mastodon = "https://social.odka.org/@mufeedali"
+liberapay = "https://liberapay.com/mufeedali"
+email = "mailto:me@mufeed.dev"
+linkedin = "https://linkedin.com/in/mufeed-ali-7988121b9"
 
 [extra]
+owner = "Mufeed Ali"
 menu = [
     { name = "Home", url = "/", weight = 1 },
     { name = "Projects", url = "/projects", weight = 2 },

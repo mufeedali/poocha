@@ -1,0 +1,79 @@
+{% macro icon(name) %}
+    {% if name == "github" %}
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            width="24"
+            height="24"
+            aria-hidden="true"
+            shape-rendering="crispEdges"
+        >
+            <path
+                d="M5 1h4v2H5zm10 0h4v2h-4zM5 3h2v4H5zm4 0h6v2H9zm8 0h2v4h-2zM3 7h2v6H3zm16 0h2v6h-2zM5 13h2v2H5zm12 0h2v2h-2zM7 15h4v2H7zm6 0h4v2h-4zM1 17h4v2H1zm8 0h2v2H9zm4 0h2v2h-2zm-8 2h4v2H5zm10 0h2v4h-2zm-8 2h2v2H7z"
+            />
+        </svg>
+    {% elif name == "mastodon" %}
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            width="24"
+            height="24"
+            aria-hidden="true"
+            shape-rendering="crispEdges"
+        >
+            <path
+                d="M6 2h12v2H6zM4 4h2v2H4zm14 0h2v2h-2zM2 6h2v12H2zm7 0h2v2H9zm4 0h2v2h-2zm7 0h2v8h-2zM7 8h2v4H7zm4 0h2v2h-2zm4 0h2v4h-2zm-5 6h10v2H10zm-2 2h2v2H8zm-4 2h2v2H4zm6 0h2v2h-2zm-4 2h4v2H6z"
+            />
+        </svg>
+    {% elif name == "liberapay" %}
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            width="24"
+            height="24"
+            aria-hidden="true"
+            shape-rendering="crispEdges"
+        >
+            <path
+                d="M9 1h2v4H9zM7 5h2v6H7zm6 2h4v2h-4zm-2 2h2v10h-2zm6 0h2v6h-2zM5 11h2v6H5zm2 4h2v2H7zm6 0h4v2h-4zm-4 2h2v6H9z"
+            />
+        </svg>
+    {% elif name == "email" %}
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            width="24"
+            height="24"
+            aria-hidden="true"
+            shape-rendering="crispEdges"
+        >
+            <path
+                d="M2 4h20v2H2zm0 2h2v14H2zm18 0h2v14h-2zM6 8h2v2H6zm10 0h2v2h-2zm-8 2h2v2H8zm6 0h2v2h-2zm-4 2h4v2h-4zm-6 6h16v2H4z"
+            />
+        </svg>
+    {% elif name == "linkedin" %}
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            width="24"
+            height="24"
+            aria-hidden="true"
+            shape-rendering="crispEdges"
+        >
+            <path
+                d="M5 3h2v2H5zm0 4h2v12H5zm4 0h2v12H9zm4 0h4v2h-4zm-2 2h2v2h-2zm6 0h2v10h-2z"
+            />
+        </svg>
+    {% endif %}
+{% endmacro %}
+
+{% macro display_name(name) %}
+  {% if name == "github"
+  %} GitHub {% elif name == "mastodon"
+  %} Mastodon {% elif name == "liberapay"
+  %} LiberaPay {% elif name == "email"
+  %} Email {% elif name == "linkedin"
+  %} LinkedIn {% else
+  %} {{ name | capitalize }} {% endif
+%}
+{% endmacro %}

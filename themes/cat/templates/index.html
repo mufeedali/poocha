@@ -1,5 +1,25 @@
-{% extends "base.html" %}
-
+{% import "partials/social_macros.html" as social %} {% extends "base.html" %}
 {% block content %}
-    {{ section.content | safe }}
+<div class="profile">
+    <div class="profile-inner">
+        <h1>{{ config.extra.owner }}</h1>
+        <h2>{{ config.description }}</h2>
+        <div class="social-icons">
+            {% if config.extra.social %} {% for name, url in config.extra.social
+            %}
+            <a
+                href="{{ url }}"
+                target="_blank"
+                rel="noopener noreferrer me"
+                title="{{ social::display_name(name=name) | trim }}"
+            >
+                {{ social::icon(name=name) }}
+            </a>
+            {% endfor %} {% endif %}
+        </div>
+        <div class="profile-summary">
+            {{ section.content | safe }}
+        </div>
+    </div>
+</div>
 {% endblock %}

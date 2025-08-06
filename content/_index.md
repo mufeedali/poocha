@@ -2,4 +2,4 @@
 title = "Home"
 +++
 
-# Welcome to my site!
+Trying to make stuff I like.
