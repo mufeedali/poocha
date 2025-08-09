@@ -1,5 +1,6 @@
 @import "palette";
 @import "social";
+@import "cards";
 
 @font-face {
     font-family: "Munro";
@@ -55,7 +56,7 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    background-color: var(--header-bg);
+    background-color: var(--card-bg);
     color: var(--header-fg);
     padding: 1rem;
     border: 1px solid var(--border);
@@ -97,7 +98,7 @@ header nav a:hover {
 }
 
 main {
-    margin: 1.5rem;
+    margin: 1.2rem;
 }
 
 // Dark mode toggle

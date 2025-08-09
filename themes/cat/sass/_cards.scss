@@ -1,0 +1,85 @@
+@import "palette";
+
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    text-decoration: none;
+    color: inherit;
+    will-change: box-shadow, color, background-color;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow) 0px 4px 12px;
+    padding: 1rem;
+    border-radius: 8px;
+    transition:
+        color 0.3s ease-in-out,
+        background-color 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    background-color: var(--mantle);
+}
+
+.project-card h2,
+.project-card p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.technologies {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.technologies li {
+    display: inline-block;
+    background-color: var(--surface1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.blog-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.blog-post-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.blog-post-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow) 0px 4px 12px;
+    padding: 1rem;
+    border-radius: 8px;
+    transition:
+        box-shadow 0.2s ease-in-out,
+        background-color 0.2s ease-in-out;
+}
+
+.blog-post-card:hover {
+    box-shadow: var(--shadow) 0px 8px 24px;
+    background-color: var(--mantle);
+}
+
+.blog-post-card .date {
+    font-size: 0.9rem;
+    color: var(--subtle-fg);
+}
+
+.blog-post-card h2,
+.blog-post-card p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
