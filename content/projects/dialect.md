@@ -13,7 +13,7 @@ github = "https://github.com/dialect-app/dialect"
 flathub = "https://flathub.org/apps/app.drey.Dialect"
 +++
 
-![Screenshot of Dialect when translating in dark mode](/images/dialect/dialect-translate-dark.png)
+![Screenshot of Dialect when translating in dark mode](/images/dialect/dialect-translate-dark.webp)
 
 **Dialect** is a translation application targeted at the GNOME desktop, but also compatible with the free desktop ecosystem in general. It is designed to support multiple online translation sources such as LibreTranslate, DeepL, Google, Lingva Translate, Bing, Yandex and others.
 
