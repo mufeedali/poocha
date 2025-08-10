@@ -57,6 +57,12 @@
                 </div>
             </header>
             <main>{% block content %}{% endblock %}</main>
+            <footer>
+                <p>
+                    © {{ now() | date(format="%Y") }} {{ config.author }}. All rights
+                    reserved.
+                </p>
+            </footer>
         </div>
         <script>
             const themeToggle = document.getElementById("theme-toggle");

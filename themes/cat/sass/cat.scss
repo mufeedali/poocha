@@ -69,7 +69,7 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .header-left {
@@ -116,8 +116,7 @@ main {
 }
 
 li {
-    line-height: 1.5rem;
-    padding: 4px;
+    line-height: 2rem;
 }
 
 code {
@@ -143,4 +142,10 @@ img {
     // Alignment hack for the dark/light mode icons
     // This is necessary to center the icons with the text.
     margin-bottom: -4px;
+}
+
+footer {
+    margin-top: 3rem;
+    text-align: center;
+    color: var(--overlay0);
 }

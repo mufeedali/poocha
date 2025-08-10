@@ -4,6 +4,7 @@ theme = "cat"
 compile_sass = true
 minify_html = true
 build_search_index = false
+author = "Mufeed Ali"
 
 [markdown]
 highlight_code = true
@@ -19,7 +20,6 @@ email = "mailto:me@mufeed.dev"
 linkedin = "https://linkedin.com/in/mufeed-ali-7988121b9"
 
 [extra]
-owner = "Mufeed Ali"
 social_order = ["github", "mastodon", "liberapay", "email", "linkedin"]
 menu = [
     { name = "Me", url = "/", weight = 1 },
