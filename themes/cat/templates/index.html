@@ -1,20 +1,21 @@
-{% import "partials/social_macros.html" as social %} {% extends "base.html" %}
+{% import "partials/externals_macros.html" as externals %}
+{% extends "base.html" %}
 {% block content %}
 <div class="profile">
     <div class="profile-inner">
         <h1>{{ config.author }}</h1>
         <h2>{{ config.description }}</h2>
-        {% if config.extra.social_order %}
-            <div class="social-icons">
-                {% for name in config.extra.social_order %}
-                    {% if config.extra.social[name] %}
+        {% if config.extra.externals_order %}
+            <div class="external-icons">
+                {% for name in config.extra.externals_order %}
+                    {% if config.extra.externals[name] %}
                         <a
-                            href="{{ config.extra.social[name] }}"
+                            href="{{ config.extra.externals[name] }}"
                             target="_blank"
                             rel="noopener noreferrer me"
-                            title="{{ social::display_name(name=name) | trim }}"
+                            title="{{ externals::display_name(name=name) | trim }}"
                         >
-                            {{ social::icon(name=name) }}
+                            {{ externals::icon(name=name) }}
                         </a>
                     {% endif %}
                 {% endfor %}

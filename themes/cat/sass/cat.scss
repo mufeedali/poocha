@@ -1,5 +1,5 @@
 @import "palette";
-@import "social";
+@import "externals";
 @import "cards";
 
 @font-face {
@@ -148,4 +148,20 @@ footer {
     margin-top: 3rem;
     text-align: center;
     color: var(--overlay0);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.project-header h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+p {
+    line-height: 1.8rem;
 }

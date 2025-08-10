@@ -1,8 +1,6 @@
 @import "palette";
 
 .card {
-    text-decoration: none;
-
     background-color: var(--card-bg);
     color: var(--card-fg);
     padding: 1rem;
@@ -13,6 +11,11 @@
 
 .card:hover:not(header) {
     background-color: var(--mantle);
+}
+
+.card a,
+a.card {
+    text-decoration: none;
 }
 
 .card h2,

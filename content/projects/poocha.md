@@ -2,8 +2,13 @@
 title = "Poocha"
 description = "This very site."
 weight = 2
+template="project_page.html"
+
 [extra]
 technologies = ["Zola", "HTML", "SCSS", "JavaSript"]
+
+[extra.externals]
+github = "https://github.com/mufeedali/poocha"
 +++
 
 This is my personal website, where I share my projects, blog posts, and other things I find interesting. It serves as a portfolio of my work and a place to express my thoughts.

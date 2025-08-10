@@ -1,14 +1,18 @@
+{% import "partials/externals_macros.html" as externals %}
 {% extends "base.html" %}
 
 {% block content %}
     <h1>{{ section.title }}</h1>
+    <p>{{ section.content | safe }}</p>
     <div class="project-cards">
         {% for page in section.pages %}
-            <a href="{% if page.extra.external_link %}{{ page.extra.external_link }}{% else %}{{ page.permalink }}{% endif %}" class="card">
-                <h2>{{ page.title }}</h2>
-                {% if page.description %}
-                    <p>{{ page.description }}</p>
-                {% endif %}
+            <div class="card">
+                <a href="{% if page.extra.external_link %}{{ page.extra.external_link }}{% else %}{{ page.permalink }}{% endif %}">
+                    <h2>{{ page.title }}</h2>
+                    {% if page.description %}
+                        <p>{{ page.description }}</p>
+                    {% endif %}
+                </a>
                 {% if page.extra.technologies %}
                     <ul class="technologies">
                         {% for tech in page.extra.technologies
@@ -16,7 +20,19 @@
                         endfor %}
                     </ul>
                 {% endif %}
-            </a>
+                {% if page.extra.externals %}
+                    <div class="external-icons">
+                        {% for name, value in page.extra.externals %}
+                            <a href="{{ value }}"
+                                target="_blank"
+                                rel="noopener noreferrer me"
+                                title="{{ externals::display_name(name=name) | trim }}">
+                                {{ externals::icon(name=name) }}
+                            </a>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
         {% endfor %}
     </div>
 {% endblock %}

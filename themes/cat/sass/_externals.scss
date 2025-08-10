@@ -1,0 +1,38 @@
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.profile-inner {
+    max-width: 600px;
+}
+
+.external-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.external-icons a {
+    color: var(--fg);
+}
+
+.external-icons svg {
+    width: 24px;
+    height: 24px;
+}
+
+.card .external-icons {
+    justify-content: flex-start;
+    margin-left: 0.5rem;
+}
+
+article .external-icons {
+    justify-content: flex-start;
+    margin-top: 0.25rem;
+    margin-left: 0;
+}

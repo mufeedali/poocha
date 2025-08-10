@@ -1,0 +1,28 @@
+{% import "partials/externals_macros.html" as externals %}
+{% extends "base.html" %}
+
+{% block content %}
+    <article>
+        <div class="project-header">
+            <h1>
+                {% if page.extra.image %}
+                    <img src="{{ page.extra.image }}" alt="{{ page.title }} image" class="project-image">
+                {% endif %}
+                {{ page.title }}
+            </h1>
+            {% if page.extra.externals %}
+                <div class="external-icons">
+                    {% for name, value in page.extra.externals %}
+                        <a href="{{ value }}"
+                            target="_blank"
+                            rel="noopener noreferrer me"
+                            title="{{ externals::display_name(name=name) | trim }}">
+                            {{ externals::icon(name=name) }}
+                        </a>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+        {{ page.content | safe }}
+    </article>
+{% endblock %}
