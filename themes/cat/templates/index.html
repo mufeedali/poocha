@@ -4,19 +4,22 @@
     <div class="profile-inner">
         <h1>{{ config.extra.owner }}</h1>
         <h2>{{ config.description }}</h2>
-        <div class="social-icons">
-            {% if config.extra.social %} {% for name, url in config.extra.social
-            %}
-            <a
-                href="{{ url }}"
-                target="_blank"
-                rel="noopener noreferrer me"
-                title="{{ social::display_name(name=name) | trim }}"
-            >
-                {{ social::icon(name=name) }}
-            </a>
-            {% endfor %} {% endif %}
-        </div>
+        {% if config.extra.social_order %}
+            <div class="social-icons">
+                {% for name in config.extra.social_order %}
+                    {% if config.extra.social[name] %}
+                        <a
+                            href="{{ config.extra.social[name] }}"
+                            target="_blank"
+                            rel="noopener noreferrer me"
+                            title="{{ social::display_name(name=name) | trim }}"
+                        >
+                            {{ social::icon(name=name) }}
+                        </a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endif %}
         <div class="profile-summary">
             {{ section.content | safe }}
         </div>

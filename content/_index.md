@@ -1,5 +1,5 @@
 +++
-title = "Home"
+title = "Me"
 +++
 
 Trying to make stuff I like.

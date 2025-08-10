@@ -4,20 +4,18 @@
     <h1>{{ section.title }}</h1>
     <div class="project-cards">
         {% for page in section.pages %}
-            <a href="{% if page.extra.external_link %}{{ page.extra.external_link }}{% else %}{{ page.permalink }}{% endif %}" class="project-card">
-                <!-- <div class="project-card"> -->
-                    <h2>{{ page.title }}</h2>
-                    {% if page.description %}
-                        <p>{{ page.description }}</p>
-                    {% endif %}
-                    {% if page.extra.technologies %}
-                        <ul class="technologies">
-                            {% for tech in page.extra.technologies
-                                 %}<li>{{ tech }}</li>{%
-                            endfor %}
-                        </ul>
-                    {% endif %}
-                <!-- </div> -->
+            <a href="{% if page.extra.external_link %}{{ page.extra.external_link }}{% else %}{{ page.permalink }}{% endif %}" class="card">
+                <h2>{{ page.title }}</h2>
+                {% if page.description %}
+                    <p>{{ page.description }}</p>
+                {% endif %}
+                {% if page.extra.technologies %}
+                    <ul class="technologies">
+                        {% for tech in page.extra.technologies
+                                %}<li>{{ tech }}</li>{%
+                        endfor %}
+                    </ul>
+                {% endif %}
             </a>
         {% endfor %}
     </div>

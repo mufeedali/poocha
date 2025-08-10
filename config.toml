@@ -2,11 +2,14 @@ title = "/home/mufeed"
 base_url = "https://mufeed.dev"
 theme = "cat"
 compile_sass = true
-build_search_index = true
+minify_html = true
+build_search_index = false
 
 [markdown]
 highlight_code = true
 description = "My personal website."
+lazy_async_image = true
+render_emoji = true
 
 [extra.social]
 github = "https://github.com/mufeedali"
@@ -17,8 +20,9 @@ linkedin = "https://linkedin.com/in/mufeed-ali-7988121b9"
 
 [extra]
 owner = "Mufeed Ali"
+social_order = ["github", "mastodon", "liberapay", "email", "linkedin"]
 menu = [
-    { name = "Home", url = "/", weight = 1 },
+    { name = "Me", url = "/", weight = 1 },
     { name = "Projects", url = "/projects", weight = 2 },
     { name = "Blog", url = "/blog", weight = 3 },
 ]

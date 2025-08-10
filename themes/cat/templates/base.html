@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="preload">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,7 +17,7 @@
 
     <body>
         <div class="container">
-            <header>
+            <header class="card">
                 <div class="header-left">
                     <a href="{{ config.base_url }}">{{ config.title }}</a>
                 </div>
@@ -95,6 +95,10 @@
                 iconToShow.style.display = "";
                 iconToHide.style.display = "none";
             });
+
+            window.onload = function() {
+                document.documentElement.removeAttribute("class");
+            };
         </script>
     </body>
 </html>

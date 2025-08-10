@@ -1,35 +1,48 @@
 @import "palette";
 
-.project-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.project-card {
-    background-color: var(--card-bg);
+.card {
     text-decoration: none;
-    color: inherit;
-    will-change: box-shadow, color, background-color;
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow) 0px 4px 12px;
+
+    background-color: var(--card-bg);
+    color: var(--card-fg);
     padding: 1rem;
-    border-radius: 8px;
-    transition:
-        color 0.3s ease-in-out,
-        background-color 0.3s ease-in-out;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow-color) 0px 4px 12px;
 }
 
-.project-card:hover {
+.card:hover:not(header) {
     background-color: var(--mantle);
 }
 
-.project-card h2,
-.project-card p {
+.card h2,
+.card p {
     margin: 0.5rem;
 }
 
+.card .date {
+    font-size: 0.9rem;
+    color: var(--subtle-fg);
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.blog-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 .technologies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.5rem;
+
     list-style: none;
     padding: 0;
     margin: 0.5rem;
@@ -38,43 +51,9 @@
 
 .technologies li {
     display: inline-block;
-    background-color: var(--surface1);
-    padding: 0.25rem 0.75rem;
+    color: var(--base);
+    background-color: var(--accent-color);
+    padding: 0.1rem 0.5rem;
     border-radius: 15px;
-    margin-right: 0.5rem;
     font-size: 0.9rem;
-}
-
-.blog-posts {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.blog-post-card {
-    text-decoration: none;
-    color: inherit;
-    background-color: var(--card-bg);
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow) 0px 4px 12px;
-    padding: 1rem;
-    border-radius: 8px;
-    transition:
-        box-shadow 0.2s ease-in-out,
-        background-color 0.2s ease-in-out;
-}
-
-.blog-post-card:hover {
-    box-shadow: var(--shadow) 0px 8px 24px;
-    background-color: var(--mantle);
-}
-
-.blog-post-card .date {
-    font-size: 0.9rem;
-    color: var(--subtle-fg);
-}
-
-.blog-post-card h2,
-.blog-post-card p {
-    margin: 0.5rem;
 }

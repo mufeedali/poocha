@@ -1,4 +1,6 @@
 // Default to dark theme (Mocha)
+// NOTE: A lot of the variables are commented out to reduce the size of the CSS.
+//       Uncomment them as needed.
 :root {
     // Mocha Palette - Base colors
     --base: #1e1e2e;
@@ -40,17 +42,16 @@
     --bg: var(--base);
     --fg: var(--text);
     --subtle-fg: var(--subtext0);
-    --card-bg: var(--mantle);
     --card-bg: var(--crust);
-    --header-fg: var(--text);
-    --link: var(--mauve);
-    --link-hover: var(--sapphire);
-    --border: var(--surface0);
-    --accent: var(--lavender);
+    --card-fg: var(--text);
+    --link-fg: var(--blue);
+    --link-hover-fg: var(--sapphire);
+    --border-color: var(--surface0);
+    --accent-color: var(--lavender);
+    --header-title-fg: var(--mauve);
+    --shadow-color: var(--crust);
     --code-bg: var(--surface1);
-    --pre-bg: var(--base);
-    --pre-fg: var(--text);
-    --shadow: var(--crust);
+    --code-fg: var(--text);
 
     // Status colors
     --success: var(--green);
@@ -101,17 +102,16 @@
     --bg: var(--base);
     --fg: var(--text);
     --subtle-fg: var(--subtext0);
-    --card-bg: var(--mantle);
     --card-bg: var(--crust);
     --header-fg: var(--text);
-    --link: var(--mauve);
-    --link-hover: var(--sapphire);
-    --border: var(--surface0);
-    --accent: var(--lavender);
+    --link-fg: var(--blue);
+    --link-hover-fg: var(--sapphire);
+    --border-color: var(--surface0);
+    --accent-color: var(--lavender);
+    --header-title-fg: var(--mauve);
+    --shadow-color: var(--crust);
     --code-bg: var(--mantle);
-    --pre-bg: var(--base);
-    --pre-fg: var(--text);
-    --shadow: var(--crust);
+    --code-fg: var(--text);
 
     // Status colors
     --success: var(--green);

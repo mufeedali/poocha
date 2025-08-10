@@ -4,7 +4,7 @@
     <h1>{{ section.title }}</h1>
     <div class="blog-posts">
         {% for page in section.pages %}
-            <a href="{{ page.permalink }}" class="blog-post-card">
+            <a href="{{ page.permalink }}" class="card">
                 <h2>{{ page.title }}</h2>
                 <p class="date">{{ page.date | date(format="%B %e, %Y") }}</p>
                 {% if page.description %}

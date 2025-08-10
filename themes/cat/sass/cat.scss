@@ -29,6 +29,19 @@
         U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20CF, U+2C60-2C7F, U+A720-A7FF;
 }
 
+.preload * {
+    // Disable transitions before page load
+    transition: none;
+}
+
+* {
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        color 0.2s ease,
+        background-color 0.2s ease;
+}
+
 body {
     background-color: var(--bg);
     color: var(--fg);
@@ -38,11 +51,11 @@ body {
 }
 
 a {
-    color: var(--link);
+    color: var(--link-fg);
 }
 
 a:hover {
-    color: var(--link-hover);
+    color: var(--link-hover-fg);
 }
 
 .container {
@@ -53,15 +66,10 @@ a:hover {
 
 header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-
-    background-color: var(--card-bg);
-    color: var(--header-fg);
-    padding: 1rem;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    box-shadow: var(--shadow) 0px 4px 12px;
+    gap: 1rem;
 }
 
 .header-left {
@@ -69,9 +77,15 @@ header {
     font-weight: bold;
 }
 
+.header-left a,
+.theme-toggle {
+    color: var(--mauve);
+}
+
 .header-right {
-    flex: 0 0 auto;
+    flex: 1 0 auto;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 1rem;
 }
@@ -90,15 +104,37 @@ header nav a {
     cursor: pointer;
     padding-top: 2px;
     border-bottom: 2px solid transparent;
-    transition: border-color 0.2s ease;
 }
 
-header nav a:hover {
-    border-bottom-color: var(--link-hover);
+header a:hover {
+    color: var(--link-hover-fg);
+    border-bottom-color: var(--link-hover-fg);
 }
 
 main {
     margin: 1.2rem;
+}
+
+li {
+    line-height: 1.5rem;
+    padding: 4px;
+}
+
+code {
+    font-family: inherit;
+    background-color: var(--code-bg);
+    color: var(--code-fg);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 4px;
+    padding-right: 2px;
+}
+
+img {
+    width: 100%;
+    height: auto;
 }
 
 // Dark mode toggle
