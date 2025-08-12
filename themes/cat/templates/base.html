@@ -69,6 +69,7 @@
             const sunIcon = document.getElementById("icon-sun");
             const moonIcon = document.getElementById("icon-moon");
             const html = document.documentElement;
+            const hasThemeableImage = document.querySelector('.themeable-img') !== null;
 
             // Set initial theme
             const storedTheme = localStorage.getItem("theme");
@@ -87,6 +88,31 @@
             iconToShow.style.display = "";
             iconToHide.style.display = "none";
 
+            // Global handler for themeable-img images
+            function updateAllThemeableImages(theme) {
+                var images = document.querySelectorAll('.themeable-img');
+                if (!images.length) return;
+
+                images.forEach(function(image) {
+                    var newSrc = image.getAttribute(`data-${theme}`);
+                    if (image.src !== newSrc) {
+                        image.style.opacity = 0.1;
+                        setTimeout(function() {
+                            image.src = newSrc;
+                            image.onload = function() {
+                                image.style.opacity = 1;
+                            };
+                        }, 100);
+                    } else {
+                        image.src = newSrc;
+                    }
+                });
+            }
+
+            if (hasThemeableImage) {
+                updateAllThemeableImages(currentTheme);
+            }
+
             themeToggle.addEventListener("click", () => {
                 const newTheme =
                     html.getAttribute("data-theme") === "dark"
@@ -100,6 +126,7 @@
                         : [sunIcon, moonIcon];
                 iconToShow.style.display = "";
                 iconToHide.style.display = "none";
+                updateAllThemeableImages(newTheme);
             });
 
             window.onload = function() {

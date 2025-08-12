@@ -131,11 +131,6 @@ code {
     padding-right: 2px;
 }
 
-img {
-    width: 100%;
-    height: auto;
-}
-
 // Dark mode toggle
 .theme-toggle {
     cursor: pointer;
@@ -164,4 +159,10 @@ footer {
 
 p {
     line-height: 1.8rem;
+}
+
+.themeable-img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.1s ease;
 }

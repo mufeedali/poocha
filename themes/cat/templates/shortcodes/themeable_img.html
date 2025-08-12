@@ -1,0 +1,17 @@
+{% set filepath = filepath | default(value="") %}
+{% set filename = filename | default(value="") %}
+{% set format = format | default(value="webp") %}
+{% set title = title | default(value="") %}
+{% set meta = get_image_metadata(path=filepath ~ '/' ~ filename ~ '-light.' ~ format) %}
+
+<img
+    class="themeable-img"
+    data-light="{{ filepath | safe }}/{{ filename }}-light.{{ format }}"
+    data-dark="{{ filepath | safe }}/{{ filename }}-dark.{{ format }}"
+    title="{{ title }}"
+    alt="{{ title }}"
+    style="aspect-ratio: {{ meta.width }}/{{ meta.height }};"
+    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E"
+>
+<link rel="preload" as="image" href="{{ filepath }}/{{ filename }}-light.{{ format }}">
+<link rel="preload" as="image" href="{{ filepath }}/{{ filename }}-dark.{{ format }}">

@@ -5,7 +5,7 @@ weight = 2
 template="project_page.html"
 
 [extra]
-technologies = ["Zola", "HTML", "SCSS", "JavaSript"]
+technologies = ["Zola", "HTML", "SCSS", "JavaSript", "Tera"]
 
 [extra.externals]
 github = "https://github.com/mufeedali/poocha"
@@ -20,4 +20,4 @@ This is my personal website, where I share my projects, blog posts, and other th
 - The Munro font was chosen to try and strike a balance between the pixel art aesthetic I want and readability.
 - Each page is supposed to be under 15 KB. This *might* stop being a thing in the future, but I like the idea of a lightweight site.
 - Hosted on [Cloudflare Pages](https://pages.cloudflare.com/).
-- Built in the open on [GitHub](https://github.com/mufeedali/poocha).
+- Built in the open at [GitHub](https://github.com/mufeedali/poocha).
