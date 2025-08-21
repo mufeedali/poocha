@@ -10,7 +10,7 @@
 }
 
 .card:hover:not(header) {
-    background-color: var(--mantle);
+    background-color: var(--card-hover-bg);
 }
 
 .card a,
@@ -55,7 +55,7 @@ a.card {
 .technologies li {
     line-height: 1.2rem;
     display: inline-block;
-    color: var(--base);
+    color: var(--button-contrast-fg);
     background-color: var(--accent-color);
     padding: 0.1rem 0.5rem;
     border-radius: 15px;

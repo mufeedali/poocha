@@ -5,7 +5,7 @@ weight = 2
 template="project_page.html"
 
 [extra]
-technologies = ["Zola", "HTML", "SCSS", "JavaSript", "Tera"]
+technologies = ["Zola", "HTML", "SCSS", "JavaScript", "Tera"]
 
 [extra.externals]
 github = "https://github.com/mufeedali/poocha"

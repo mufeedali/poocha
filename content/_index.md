@@ -1,5 +1,6 @@
 +++
 title = "Me"
+description = "Welcome to my personal website."
 +++
 
 Trying to make stuff I like.

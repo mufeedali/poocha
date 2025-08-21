@@ -4,14 +4,17 @@
 {% set title = title | default(value="") %}
 {% set meta = get_image_metadata(path=filepath ~ '/' ~ filename ~ '-light.' ~ format) %}
 
-<img
-    class="themeable-img"
-    data-light="{{ filepath | safe }}/{{ filename }}-light.{{ format }}"
-    data-dark="{{ filepath | safe }}/{{ filename }}-dark.{{ format }}"
-    title="{{ title }}"
+<div class="themed-img-container" style="aspect-ratio: {{ meta.width }}/{{ meta.height }};">
+  <img 
+    class="themed-img themed-img--light"
+    src="{{ filepath }}/{{ filename }}-light.{{ format }}"
     alt="{{ title }}"
-    style="aspect-ratio: {{ meta.width }}/{{ meta.height }};"
-    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E"
->
+    title="{{ title }}">
+  <img 
+    class="themed-img themed-img--dark"
+    src="{{ filepath }}/{{ filename }}-dark.{{ format }}"
+    alt="{{ title }}"
+    title="{{ title }}">
+</div>
 <link rel="preload" as="image" href="{{ filepath }}/{{ filename }}-light.{{ format }}">
 <link rel="preload" as="image" href="{{ filepath }}/{{ filename }}-dark.{{ format }}">

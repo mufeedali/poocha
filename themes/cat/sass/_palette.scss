@@ -43,15 +43,30 @@
     --fg: var(--text);
     --subtle-fg: var(--subtext0);
     --card-bg: var(--crust);
+    --card-hover-bg: var(--mantle);
     --card-fg: var(--text);
     --link-fg: var(--blue);
     --link-hover-fg: var(--sapphire);
     --border-color: var(--surface0);
     --accent-color: var(--lavender);
     --header-title-fg: var(--mauve);
+    --footer-fg: var(--overlay0);
     --shadow-color: var(--crust);
     --code-bg: var(--surface1);
     --code-fg: var(--text);
+    --button-contrast-fg: var(--base);
+    
+    // Interactive states
+    --focus-color: var(--lavender);
+    --hover-bg: var(--surface0);
+    --active-bg: var(--surface1);
+    --disabled-fg: var(--overlay0);
+    --disabled-bg: var(--surface0);
+    
+    // Text hierarchy
+    --text-muted: var(--subtext0);
+    --text-subtle: var(--subtext1);
+    --text-emphasis: var(--accent-color);
 
     // Status colors
     --success: var(--green);
@@ -103,15 +118,30 @@
     --fg: var(--text);
     --subtle-fg: var(--subtext0);
     --card-bg: var(--crust);
+    --card-hover-bg: var(--mantle);
     --header-fg: var(--text);
     --link-fg: var(--blue);
     --link-hover-fg: var(--sapphire);
     --border-color: var(--surface0);
     --accent-color: var(--lavender);
     --header-title-fg: var(--mauve);
+    --footer-fg: var(--overlay0);
     --shadow-color: var(--crust);
     --code-bg: var(--mantle);
     --code-fg: var(--text);
+    --button-contrast-fg: var(--base);
+    
+    // Interactive states  
+    --focus-color: var(--lavender);
+    --hover-bg: var(--surface0);
+    --active-bg: var(--surface1);
+    --disabled-fg: var(--overlay0);
+    --disabled-bg: var(--surface0);
+    
+    // Text hierarchy
+    --text-muted: var(--subtext0);
+    --text-subtle: var(--subtext1);
+    --text-emphasis: var(--accent-color);
 
     // Status colors
     --success: var(--green);
