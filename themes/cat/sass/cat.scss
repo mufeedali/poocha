@@ -29,6 +29,20 @@
         U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20CF, U+2C60-2C7F, U+A720-A7FF;
 }
 
+/* serenityos-emoji-custom */
+@font-face {
+    font-family: "SerenityOS Emoji";
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: 100%;
+    src:
+        local("SerenityOS Emoji Regular"),
+        local("SerenityOSEmoji-Regular"),
+        url("serenity/serenityos-emoji-custom.woff2") format("woff2");
+    unicode-range: 1f3a8, 2b50, 1f50d, 1f4cb, 1f50e, 1f4be, 1f680, 267f, 26a0;
+    font-display: swap;
+}
+
 .preload * {
     // Disable transitions before page load
     transition: none;
@@ -45,7 +59,7 @@
 body {
     background-color: var(--bg);
     color: var(--fg);
-    font-family: "Munro", monospace, sans-serif;
+    font-family: "SerenityOS Emoji", "Munro", monospace, sans-serif;
     margin: 0;
     padding: 2rem;
 }
