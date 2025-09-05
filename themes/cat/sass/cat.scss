@@ -51,6 +51,7 @@
 * {
     transition:
         border-color 0.2s ease,
+        border-style 0.2s ease,
         box-shadow 0.2s ease,
         color 0.2s ease,
         background-color 0.2s ease;
@@ -129,16 +130,32 @@ main {
     margin: 1.2rem;
 }
 
+// Override margin for blog posts (pages with article.card)
+main:has(article.card) {
+    margin: 1.2rem 0;
+}
+
 li {
     line-height: 2rem;
 }
 
-code {
+pre {
     font-family: inherit;
+    border: 2px solid var(--disabled-fg);
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+code,
+code>span {
+    font-family: inherit;
+}
+
+:not(pre)>code {
     background-color: var(--code-bg);
     color: var(--code-fg);
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
+    border: 2px solid var(--disabled-fg);
     padding-top: 2px;
     padding-bottom: 2px;
     padding-left: 4px;
@@ -164,6 +181,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .project-header h1 {
@@ -221,4 +239,67 @@ p {
 
 [data-theme="dark"] .themed-inline.dark {
     display: inline;
+}
+
+// ---- BLOG POST STYLING ----
+
+article.card {
+    padding: 0;
+}
+
+article.card>.post-title,
+article.card>.project-header {
+    margin: 0;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--active-bg);
+}
+
+article.card>div {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+article.card h2:not(:first-child),
+article.card p:not(:first-child):not(.post-title *):not(.project-header *) {
+    margin-top: 1rem;
+}
+
+// Post title and metadata styling
+
+.post-title {
+    margin: 0;
+}
+
+.post-title h1,
+.project-header h1 {
+    margin-bottom: 0;
+}
+
+.card>.post-title>h1,
+.card>.project-header h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.post-title .date {
+    font-size: 0.9rem;
+    color: var(--subtle-fg);
+    margin: 0;
+}
+
+.post-title .description {
+    font-style: italic;
+    color: var(--subtle-fg);
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.project-desc {
+    color: var(--subtle-fg);
+    font-size: 1.1rem;
 }

@@ -4,12 +4,12 @@
     background-color: var(--card-bg);
     color: var(--card-fg);
     padding: 1rem;
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
+    border: 2px solid var(--active-bg);
     box-shadow: var(--shadow-color) 0px 4px 12px;
+    position: relative;
 }
 
-.card:hover:not(header) {
+.card:hover:not(header, article) {
     background-color: var(--card-hover-bg);
 }
 
@@ -49,7 +49,7 @@ a.card {
     list-style: none;
     padding: 0;
     margin: 0.5rem;
-    margin-top: 1rem;
+    margin-top: 0.75rem;
 }
 
 .technologies li {
@@ -59,5 +59,68 @@ a.card {
     background-color: var(--accent-color);
     padding: 0.1rem 0.5rem;
     border-radius: 15px;
-    font-size: 0.9rem;
+    font-size: 1rem;
+}
+
+.project-card {
+    padding: 0;
+}
+
+.project-card > .project-header {
+    margin: 0;
+    padding: 0;
+    border-bottom: 2px solid var(--active-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+.project-header-link {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-header-link:hover {
+    background-color: var(--card-hover-bg);
+    color: inherit;
+}
+
+.project-header-link h2 {
+    margin: 0;
+}
+
+.project-card .external-icons {
+    display: flex;
+    align-items: center;
+    padding-right: 1.25rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.project-content-link {
+    display: block;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-content-link:hover {
+    background-color: var(--card-hover-bg);
+    color: inherit;
+}
+
+.project-content-link p,
+.project-content-link .technologies {
+    margin: 0.5rem;
 }

@@ -16,4 +16,4 @@ flathub = "https://flathub.org/apps/dev.mufeed.Wordbook"
 
 **Wordbook** is an offline English-English dictionary application built for GNOME, and powered by [Open English WordNet](https://github.com/globalwordnet/english-wordnet) and eSpeak-ng. It was originally made as an alternative to WordWeb on Windows.
 
-Currently has over 25,000 installs on [Flathub](https://flathub.org/apps/dev.mufeed.Wordbook/). I'm also working on getting [Wordbook into the GNOME Circle](https://gitlab.gnome.org/Teams/Circle/-/issues/82).
+Currently has over 29,000 installs on [Flathub](https://flathub.org/apps/dev.mufeed.Wordbook/) and is part of the [GNOME Circle](https://apps.gnome.org/Wordbook/).

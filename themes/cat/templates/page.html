@@ -1,8 +1,18 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <article>
-        <h1>{{ page.title }}</h1>
-        {{ page.content | safe }}
+    <article class="card">
+        <div class="post-title">
+            <h1>{{ page.title }}</h1>
+            {% if page.date %}
+                <p class="date">{{ page.date | date(format="%B %e, %Y") }}</p>
+            {% endif %}
+            {% if page.description %}
+                <p class="description">{{ page.description }}</p>
+            {% endif %}
+        </div>
+        <div class="article-text">
+            {{ page.content | safe }}
+        </div>
     </article>
 {% endblock %}
