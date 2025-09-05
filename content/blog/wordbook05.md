@@ -6,6 +6,8 @@ description = "Wordbook 0.5 is here!"
 
 Wordbook just got a major upgrade and is now part of the [GNOME Circle](https://apps.gnome.org/Wordbook/)! This release brings significant UI improvements and several new features:
 
+{{ themed_img(filepath="/images/wordbook", filename="wordbook-search", format="webp", title="Screenshot of Wordbook when searching") }}
+
 **What's New:**
 
 - 🎨 **UI Redesign** so that Wordbook hopefully looks a lot nicer now.
