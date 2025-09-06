@@ -15,12 +15,11 @@ render_emoji = true
 [extra.externals]
 github = "https://github.com/mufeedali"
 mastodon = "https://social.odka.org/@mufeedali"
-liberapay = "https://liberapay.com/mufeedali"
-email = "mailto:me@mufeed.dev"
 linkedin = "https://linkedin.com/in/mufeed-ali-7988121b9"
+email = "mailto:me@mufeed.dev"
 
 [extra]
-externals_order = ["github", "mastodon", "liberapay", "email", "linkedin"]
+externals_order = ["github", "mastodon", "linkedin", "email"]
 menu = [
     { name = "Projects", url = "/projects", weight = 1 },
     { name = "Blog", url = "/blog", weight = 2 },
