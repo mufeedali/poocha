@@ -22,7 +22,6 @@ linkedin = "https://linkedin.com/in/mufeed-ali-7988121b9"
 [extra]
 externals_order = ["github", "mastodon", "liberapay", "email", "linkedin"]
 menu = [
-    { name = "Me", url = "/", weight = 1 },
-    { name = "Projects", url = "/projects", weight = 2 },
-    { name = "Blog", url = "/blog", weight = 3 },
+    { name = "Projects", url = "/projects", weight = 1 },
+    { name = "Blog", url = "/blog", weight = 2 },
 ]
