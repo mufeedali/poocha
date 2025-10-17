@@ -5,7 +5,7 @@ This is my personal website, where I share my projects, blog posts, and other th
 # The Theme
 
 - Custom-built with a **semi-retro** aesthetic, blending some modern styling with Pixel art design.
-- Each icon was hand-drawn using [Aseprite](https://www.aseprite.org/).
+- The icons were hand-drawn using [Aseprite](https://www.aseprite.org/).
 - Color are adapted from the [Catppuccin color palette](https://catppuccin.com/palette/). Hence the theme name `Cat` and the site name `Poocha` (Cat in Malayalam, my mother tongue).
 - The [Munro](https://www.tenbytwenty.com/#munro) font was chosen to try and strike a balance between the pixel art aesthetic I want and readability.
 

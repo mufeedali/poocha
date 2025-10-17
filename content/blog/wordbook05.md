@@ -10,14 +10,14 @@ Wordbook just got a major upgrade and is now part of the [GNOME Circle](https://
 
 **What's New:**
 
-- 🎨 **UI Redesign** so that Wordbook hopefully looks a lot nicer now.
-- ⭐ **Favorites** so you can save words you want to revisit.
-- 🔍 **"Did you mean" suggestions** for when you make an oopsy.
-- 📋 **Auto-paste clipboard content** on launch if you live a fast life.
-- 🔎 **GNOME Search Provider** so you can search words directly from the overview.
-- 💾 **Persistent history** upto 20 entries with better management.
-- 🚀 **Significant performance & responsiveness improvements**.
-- ♿ **Better keyboard navigation & accessibility**.
+- **UI Redesign** so that Wordbook hopefully looks a lot nicer now.
+- **Favorites** so you can save words you want to revisit.
+- **"Did you mean" suggestions** for when you make an oopsy.
+- **Auto-paste clipboard content** on launch if you live a fast life.
+- **GNOME Search Provider** so you can search words directly from the overview.
+- **Persistent history** upto 20 entries with better management.
+- **Significant performance & responsiveness improvements**.
+- **Better keyboard navigation & accessibility**.
 
 ⚠️ **BREAKING:** The Settings schema has changed, so you will lose any settings you had.
 
