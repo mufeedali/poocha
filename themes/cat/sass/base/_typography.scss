@@ -41,3 +41,11 @@ code>span {
     padding-left: 4px;
     padding-right: 2px;
 }
+
+a code {
+    color: var(--link-fg);
+}
+
+a:hover code {
+    color: var(--link-hover-fg);
+}
