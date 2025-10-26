@@ -10,8 +10,13 @@ p {
     line-height: 1.8rem;
 }
 
+ul {
+    list-style-type: square;
+}
+
 li {
     line-height: 2rem;
+    padding-left: 0.5rem;
 }
 
 pre {

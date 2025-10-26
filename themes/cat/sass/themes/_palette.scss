@@ -26,9 +26,9 @@
     // --flamingo: #f2cdcd;
     // --pink: #f5c2e7;
     --mauve: #cba6f7;
-    // --red: #f38ba8;
+    --red: #f38ba8;
     // --maroon: #eba0ac;
-    // --peach: #fab387;
+    --peach: #fab387;
     --yellow: #f9e2af;
     --green: #a6e3a1;
     // --teal: #94e2d5;
@@ -55,6 +55,11 @@
     --code-fg: var(--text);
     --button-contrast-fg: var(--base);
     --disabled-fg: var(--overlay0);
+    --warning: var(--peach);
+    --info: var(--blue);
+    --success: var(--green);
+    --error: var(--red);
+    --note: var(--lavender);
 }
 
 // Light theme (Latte)
@@ -84,9 +89,9 @@
     // --flamingo: #dd7878;
     // --pink: #ea76cb;
     --mauve: #8839ef;
-    // --red: #d20f39;
+    --red: #d20f39;
     // --maroon: #e64553;
-    // --peach: #fe640b;
+    --peach: #fe640b;
     --yellow: #df8e1d;
     --green: #40a02b;
     // --teal: #179299;
@@ -112,4 +117,9 @@
     --code-fg: var(--text);
     --button-contrast-fg: var(--base);
     --disabled-fg: var(--overlay0);
+    --warning: var(--peach);
+    --info: var(--blue);
+    --success: var(--green);
+    --error: var(--red);
+    --note: var(--lavender);
 }
