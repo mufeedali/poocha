@@ -1,0 +1,38 @@
+a {
+    color: var(--link-fg);
+}
+
+a:hover {
+    color: var(--link-hover-fg);
+}
+
+p {
+    line-height: 1.8rem;
+}
+
+li {
+    line-height: 2rem;
+}
+
+pre {
+    font-family: inherit;
+    border: 2px solid var(--disabled-fg);
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+code,
+code>span {
+    font-family: inherit;
+}
+
+:not(pre)>code {
+    background-color: var(--code-bg);
+    color: var(--code-fg);
+    border: 2px solid var(--disabled-fg);
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 4px;
+    padding-right: 2px;
+}

@@ -1,0 +1,47 @@
+// --------- Themed elements ---------
+
+.themed-img-container {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.themed-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.2s ease;
+}
+
+// Show light by default, hide dark
+.themed-img--light {
+    opacity: 1;
+}
+
+.themed-img--dark {
+    opacity: 0;
+}
+
+// In dark theme, hide light and show dark
+[data-theme="dark"] .themed-img--light {
+    opacity: 0;
+}
+
+[data-theme="dark"] .themed-img--dark {
+    opacity: 1;
+}
+
+.themed-inline {
+    display: none;
+}
+
+[data-theme="light"] .themed-inline.light {
+    display: inline;
+}
+
+[data-theme="dark"] .themed-inline.dark {
+    display: inline;
+}

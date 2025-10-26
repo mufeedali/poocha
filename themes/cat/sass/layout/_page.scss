@@ -1,0 +1,14 @@
+.container {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+main {
+    margin: 1.2rem;
+}
+
+// Override margin for blog posts (pages with article.card)
+main:has(article.card) {
+    margin: 1.2rem 0;
+}

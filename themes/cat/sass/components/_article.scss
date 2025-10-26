@@ -1,0 +1,79 @@
+// ---- BLOG POST & PROJECT ARTICLE STYLING ----
+
+article.card {
+    padding: 0;
+}
+
+article.card>.post-title,
+article.card>.project-header {
+    margin: 0;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--active-bg);
+}
+
+article.card>div {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+article.card h2:not(:first-child),
+article.card p:not(:first-child):not(.post-title *):not(.project-header *) {
+    margin-top: 1rem;
+}
+
+article .external-icons {
+    padding-left: 0;
+}
+
+// Post title and metadata styling
+
+.post-title {
+    margin: 0;
+}
+
+.post-title h1,
+.project-header h1 {
+    margin-bottom: 0;
+}
+
+.card>.post-title>h1,
+.card>.project-header h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.post-title .date {
+    font-size: 0.9rem;
+    color: var(--subtle-fg);
+    margin: 0;
+}
+
+.post-title .description {
+    font-style: italic;
+    color: var(--subtle-fg);
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-header h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.project-desc {
+    color: var(--subtle-fg);
+    font-size: 1.1rem;
+}

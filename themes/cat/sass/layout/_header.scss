@@ -1,0 +1,54 @@
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header-left {
+    flex: 0 0 auto;
+    font-weight: bold;
+}
+
+.header-left a,
+.theme-toggle {
+    color: var(--header-title-fg);
+}
+
+.header-right {
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header nav a {
+    cursor: pointer;
+    padding-top: 2px;
+    border-bottom: 2px solid transparent;
+}
+
+header a:hover {
+    color: var(--link-hover-fg);
+    border-bottom-color: var(--link-hover-fg);
+}
+
+// Dark mode toggle
+.theme-toggle {
+    cursor: pointer;
+    // Alignment hack for the dark/light mode icons
+    // This is necessary to center the icons with the text.
+    margin-bottom: -4px;
+}
