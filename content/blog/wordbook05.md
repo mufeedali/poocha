@@ -19,7 +19,9 @@ Wordbook just got a major upgrade and is now part of the [GNOME Circle](https://
 - **Significant performance & responsiveness improvements**.
 - **Better keyboard navigation & accessibility**.
 
-⚠️ **BREAKING:** The Settings schema has changed, so you will lose any settings you had.
+{% callout(type="warning", title="BREAKING") %}
+The Settings schema has changed, so you will lose any settings you had.
+{% end %}
 
 I plan to write later about why this took so long. But for now, that’s it.
 
