@@ -3,8 +3,8 @@
     color: var(--card-fg);
     padding: 0.8rem;
     margin: 0.3rem;
-    border: 2px solid var(--active-bg);
-    box-shadow: var(--shadow-color) 0px 4px 12px;
+    border: 2px solid var(--border);
+    box-shadow: var(--shadow) 0px 4px 12px;
     border-left: 0.5rem solid;
     border-radius: 0.25rem;
 }

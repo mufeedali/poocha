@@ -2,8 +2,8 @@
     background-color: var(--card-bg);
     color: var(--card-fg);
     padding: 1rem;
-    border: 2px solid var(--active-bg);
-    box-shadow: var(--shadow-color) 0px 4px 12px;
+    border: 2px solid var(--border);
+    box-shadow: var(--shadow) 0px 4px 12px;
     position: relative;
 }
 
@@ -59,7 +59,7 @@ a.card {
     line-height: 1.2rem;
     display: inline-block;
     color: var(--button-contrast-fg);
-    background-color: var(--accent-color);
+    background-color: var(--accent);
     padding: 0.1rem 0.5rem;
     border-radius: 15px;
     font-size: 1rem;
