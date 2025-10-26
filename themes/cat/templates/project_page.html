@@ -2,34 +2,32 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <article class="card">
-        <div class="project-header">
-            <div>
+<article class="card">
+    <div class="project-header">
+        <div>
             <h1>
                 {% if page.extra.image %}
-                    <img src="{{ page.extra.image }}" alt="{{ page.title }} image" class="project-image">
+                <img src="{{ page.extra.image }}" alt="{{ page.title }} image" class="project-image">
                 {% endif %}
                 {{ page.title }}
             </h1>
             {% if page.description %}
-                <div class="project-desc">{{ page.description }}</div>
-            {% endif %}
-            </div>
-            {% if page.extra.externals %}
-                <div class="external-icons">
-                    {% for name, value in page.extra.externals %}
-                        <a href="{{ value }}"
-                            target="_blank"
-                            rel="noopener noreferrer me"
-                            title="{{ externals::display_name(name=name) | trim }}">
-                            {{ externals::icon(name=name) }}
-                        </a>
-                    {% endfor %}
-                </div>
+            <div class="project-desc">{{ page.description }}</div>
             {% endif %}
         </div>
-        <div>
-            {{ page.content | safe }}
+        {% if page.extra.externals %}
+        <div class="external-icons">
+            {% for name, value in page.extra.externals %}
+            <a href="{{ value }}" target="_blank" rel="noopener noreferrer me"
+                title="{{ externals::display_name(name=name) | trim }}">
+                {{ externals::icon(name=name) }}
+            </a>
+            {% endfor %}
         </div>
-    </article>
+        {% endif %}
+    </div>
+    <div>
+        {{ page.content | safe }}
+    </div>
+</article>
 {% endblock %}

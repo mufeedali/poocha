@@ -5,15 +5,9 @@
 {% set meta = get_image_metadata(path=filepath ~ '/' ~ filename ~ '-light.' ~ format) %}
 
 <div class="themed-img-container" style="aspect-ratio: {{ meta.width }}/{{ meta.height }};">
-  <img 
-    class="themed-img themed-img--light"
-    src="{{ filepath }}/{{ filename }}-light.{{ format }}"
-    alt="{{ title }}"
+  <img class="themed-img themed-img--light" src="{{ filepath }}/{{ filename }}-light.{{ format }}" alt="{{ title }}"
     title="{{ title }}">
-  <img 
-    class="themed-img themed-img--dark"
-    src="{{ filepath }}/{{ filename }}-dark.{{ format }}"
-    alt="{{ title }}"
+  <img class="themed-img themed-img--dark" src="{{ filepath }}/{{ filename }}-dark.{{ format }}" alt="{{ title }}"
     title="{{ title }}">
 </div>
 <link rel="preload" as="image" href="{{ filepath }}/{{ filename }}-light.{{ format }}">

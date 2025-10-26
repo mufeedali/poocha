@@ -1,7 +1,7 @@
 @mixin callout-variant($color-var) {
     border-color: var($color-var);
     background-color: color-mix(in srgb, var($color-var) 3%, var(--bg));
-    
+
     .callout-header {
         background-color: color-mix(in srgb, var($color-var) 8%, var(--bg));
         border-bottom: 2px solid var($color-var);

@@ -6,20 +6,16 @@
         <h1>{{ config.author }}</h1>
         <h2>{{ config.description }}</h2>
         {% if config.extra.externals_order %}
-            <div class="external-icons">
-                {% for name in config.extra.externals_order %}
-                    {% if config.extra.externals[name] %}
-                        <a
-                            href="{{ config.extra.externals[name] }}"
-                            target="_blank"
-                            rel="noopener noreferrer me"
-                            title="{{ externals::display_name(name=name) | trim }}"
-                        >
-                            {{ externals::icon(name=name) }}
-                        </a>
-                    {% endif %}
-                {% endfor %}
-            </div>
+        <div class="external-icons">
+            {% for name in config.extra.externals_order %}
+            {% if config.extra.externals[name] %}
+            <a href="{{ config.extra.externals[name] }}" target="_blank" rel="noopener noreferrer me"
+                title="{{ externals::display_name(name=name) | trim }}">
+                {{ externals::icon(name=name) }}
+            </a>
+            {% endif %}
+            {% endfor %}
+        </div>
         {% endif %}
         <div class="profile-summary">
             {{ section.content | safe }}

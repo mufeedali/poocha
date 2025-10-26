@@ -2,41 +2,41 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>{{ section.title }}</h1>
-    <p>{{ section.content | safe }}</p>
-    <div class="project-cards">
-        {% for page in section.pages %}
-            <div class="card project-card">
-                <div class="project-header">
-                    <a href="{% if page.extra.external_link %}{{ page.extra.external_link }}{% else %}{{ page.permalink }}{% endif %}" class="project-header-link">
-                        <h2>{{ page.title }}</h2>
-                    </a>
-                    {% if page.extra.externals %}
-                        <div class="external-icons">
-                            {% for name, value in page.extra.externals %}
-                                <a href="{{ value }}"
-                                    target="_blank"
-                                    rel="noopener noreferrer me"
-                                    title="{{ externals::display_name(name=name) | trim }}">
-                                    {{ externals::icon(name=name) }}
-                                </a>
-                            {% endfor %}
-                        </div>
-                    {% endif %}
-                </div>
-                <a href="{% if page.extra.external_link %}{{ page.extra.external_link }}{% else %}{{ page.permalink }}{% endif %}" class="project-content-link">
-                    {% if page.description %}
-                        <p>{{ page.description }}</p>
-                    {% endif %}
-                    {% if page.extra.technologies %}
-                        <ul class="technologies">
-                            {% for tech in page.extra.technologies
-                                    %}<li>{{ tech }}</li>{%
-                            endfor %}
-                        </ul>
-                    {% endif %}
+<h1>{{ section.title }}</h1>
+<p>{{ section.content | safe }}</p>
+<div class="project-cards">
+    {% for page in section.pages %}
+    <div class="card project-card">
+        <div class="project-header">
+            <a href="{% if page.extra.external_link %}{{ page.extra.external_link }}{% else %}{{ page.permalink }}{% endif %}"
+                class="project-header-link">
+                <h2>{{ page.title }}</h2>
+            </a>
+            {% if page.extra.externals %}
+            <div class="external-icons">
+                {% for name, value in page.extra.externals %}
+                <a href="{{ value }}" target="_blank" rel="noopener noreferrer me"
+                    title="{{ externals::display_name(name=name) | trim }}">
+                    {{ externals::icon(name=name) }}
                 </a>
+                {% endfor %}
             </div>
-        {% endfor %}
+            {% endif %}
+        </div>
+        <a href="{% if page.extra.external_link %}{{ page.extra.external_link }}{% else %}{{ page.permalink }}{% endif %}"
+            class="project-content-link">
+            {% if page.description %}
+            <p>{{ page.description }}</p>
+            {% endif %}
+            {% if page.extra.technologies %}
+            <ul class="technologies">
+                {% for tech in page.extra.technologies
+                %}<li>{{ tech }}</li>{%
+                endfor %}
+            </ul>
+            {% endif %}
+        </a>
     </div>
+    {% endfor %}
+</div>
 {% endblock %}
