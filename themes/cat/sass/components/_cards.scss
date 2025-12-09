@@ -67,6 +67,8 @@ a.card {
 
 .project-card {
     padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card>.project-header {
@@ -106,7 +108,9 @@ a.card {
 }
 
 .project-content-link {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
     padding-bottom: 0.5rem;
@@ -123,4 +127,8 @@ a.card {
 .project-content-link .technologies {
     margin: 0;
     padding: 0.5rem;
+}
+
+.project-content-link .technologies {
+    margin-top: auto;
 }
