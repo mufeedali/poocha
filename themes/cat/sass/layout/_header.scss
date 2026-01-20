@@ -28,6 +28,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 1rem;
+    margin-bottom: -2px;
 }
 
 header a {
@@ -47,6 +48,10 @@ header a:hover {
 // Dark mode toggle
 .theme-toggle {
     cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+
     // Alignment hack for the dark/light mode icons
     // This is necessary to center the icons with the text.
     margin-bottom: -4px;

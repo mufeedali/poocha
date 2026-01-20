@@ -7,8 +7,6 @@ build_search_index = false
 author = "Mufeed Ali"
 
 [markdown]
-highlight_code = true
-description = "My personal website."
 lazy_async_image = true
 render_emoji = true
 

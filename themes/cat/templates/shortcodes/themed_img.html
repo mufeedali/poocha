@@ -2,6 +2,8 @@
 {% set filename = filename | default(value="") %}
 {% set format = format | default(value="webp") %}
 {% set title = title | default(value="") %}
+{# Note: This assumes both light and dark images have identical dimensions. 
+   If they differ, the dark image may be distorted as the container uses the light image's aspect ratio. #}
 {% set meta = get_image_metadata(path=filepath ~ '/' ~ filename ~ '-light.' ~ format) %}
 
 <div class="themed-img-container" style="aspect-ratio: {{ meta.width }}/{{ meta.height }};">
